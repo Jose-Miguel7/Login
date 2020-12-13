@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}
-	Registro
+	Login
 {% endblock title %}
 
 {% block cssfields %}
@@ -10,14 +10,13 @@
 {% endblock cssfields %}
 
 {% block content %}
-
-	<h4 id="title-register">Registro de Usuarios</h4>
+	<h4 id="title-register">Login</h4>
 
 	<div class="grid-x">
 		<div class="cell large-3" id="div1"></div>
 		<form method="post" class="cell large-5" id="form-login">{% csrf_token %}
 			{{ form.as_p }}
-			<button type="submit">Enviar</button>
+			<button type="submit">Acceder</button>
 		</form>
 		<div class="cell large-3 div2"></div>
 	</div>

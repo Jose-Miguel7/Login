@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+	Sistema
+{% endblock title %}
+
+{% block cssfields %}
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/app.css' %}">
+{% endblock cssfields %}
+
+{% block content %}
+	<h4 id="title-register">Panel de usuarios</h4>
+	<ul>
+		<li><a href="{% url 'users_app:user-logout' %}">Cerrar Sesión</a></li>
+		<li><a href="{% url 'users_app:user-update' %}">Actualizar Datos</a></li>
+	</ul>
+{% endblock content %}
