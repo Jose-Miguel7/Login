@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}
+	Registro
+{% endblock title %}
+
+{% block cssfields %}
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/app.css' %}">
+{% endblock cssfields %}
+
+{% block content %}
+	<div class="grid-x">
+
+		<div class="cell large-5 grid-x">
+			<h4 class="cell large-5" id="title-register">Registro de Usuarios</h4>
+		</div>
+	</div>
+	<form method="post" id="form-login">{% csrf_token %}
+		{{ form.as_p }}
+		<button type="submit">Enviar</button>
+	</form>
+{% endblock content %}
